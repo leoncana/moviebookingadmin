@@ -1,0 +1,100 @@
+// Variables
+$bg-color: #1f1d37;
+$link-color: #fff;
+$link-hover-bg: #19182c;
+$card-bg: #fff;
+$card-border: #ddd;
+$input-border: #ccc;
+$btn-bg: #007bff;
+$btn-bg-hover: #000;
+
+// City search section with cards
+.citysearch {
+  display: flex;
+  flex-direction: column; // Stack input and button vertically
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  .citysearch {
+    display: flex;
+    flex-direction: column; // Align children vertically
+    align-items: center; // Center children horizontally
+    justify-content: center; // Center children vertically
+    padding: 20px; // Add padding around the search area
+    width: 100%; // Ensure the search bar takes the full width of its container
+    max-width: 500px; // Set a max-width to keep it contained
+    margin: 0 auto; // Center the search bar in the page
+    box-sizing: border-box; // Include padding and border in the element's width
+  
+    .search-card {
+      width: 100%; // Ensure the card takes the full width
+      margin-bottom: 10px; // Add some space below the card
+  
+      input[type="text"] {
+        width: calc(100% - 20px); // Calculate width, subtracting padding
+        margin-bottom: 10px; // Add space below the input field
+        box-sizing: border-box; // Include padding and border in the element's width
+      }
+  
+      button {
+        width: 100%; // Ensure the button takes the full width
+        box-sizing: border-box; // Include padding and border in the element's width
+      }
+    }
+  }
+}
+// Styles for items (Screens and Movies)
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around; // Even spacing between cards
+  margin-bottom: 30px;
+}
+
+// Movie item card
+.item {
+  background-color: $card-bg;
+  border: 1px solid $card-border;
+  border-radius: 4px;
+  padding: 20px;
+  cursor: pointer;
+  width: 300px; // Adjust width as needed or use percentage
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff9e9e;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+.selected {
+  background-color: $btn-bg;
+  color: $link-color;
+}
+
+// Input fields for time and date
+input[type="time"],
+input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid $input-border;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+// Responsive layout for smaller screens
+@media (max-width: 768px) {
+  .items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 100%; // Full width for smaller screens
+  }
+}

@@ -1,0 +1,55 @@
+$bg-color: #1f1d37;
+$link-color: #fff;
+$link-hover-bg: #19182c;
+$input-border-color: black; 
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: $bg-color;
+    color: $link-color;
+    padding: 10px;
+    .logo {
+        margin: 10px;
+    }
+    a {
+        text-decoration: none;
+        color: $link-color;
+        margin: 0 10px;
+        &:hover {
+            background-color: $link-hover-bg;
+            color: $link-color;
+        }
+    }
+}
+
+.adminlinks {
+    button {
+        display: contents;
+        font-size: 1.2rem;
+    }
+    span {
+        display: inline-flex;
+    }
+}
+
+@media (min-width: 900px) {
+    .adminlinks {
+        span {
+            margin-left: 20vw;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        font-size: 12px;
+    }
+    .adminlinks {
+        button {
+            font-size: 12px;
+        }
+    }
+}
